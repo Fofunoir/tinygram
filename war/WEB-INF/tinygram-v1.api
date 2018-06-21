@@ -1,0 +1,337 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://woven-amulet-194010.appspot.com/_ah/api",
+  "name" : "tinygram",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "discovery" : [ "PUBLIC" ],
+  "adapter" : {
+    "bns" : "https://woven-amulet-194010.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "tinygram.uNUSED_MessageEP.addMessageToFollowers" : {
+      "path" : "addMessageToFollowers",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_MessageEP.addMessageToFollowers",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "tinygram.getTimeline" : {
+      "path" : "getTimeline/{name}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_MessageEP.getTimeline",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tinygram.postMessage" : {
+      "path" : "postMessage/{name}/",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_MessageEP.postMessage",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          },
+          "msg" : {
+            "type" : "string",
+            "required" : true
+          },
+          "img" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tinygram.uNUSED_MessageEP.addMessageToUser" : {
+      "path" : "addMessageToUser",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_MessageEP.addMessageToUser",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "tinygram.getMembre" : {
+      "path" : "isMembre/{name}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_Users.getMembre",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tinygram.setMembre" : {
+      "path" : "membre/{name}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_Users.setMembre",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "tinygram.uNUSED_Followers.getFollowers" : {
+      "path" : "getFollowers/{name}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_Followers.getFollowers",
+      "request" : {
+        "parameters" : {
+          "userID" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "tinygram.uNUSED_Followers.addFollower" : {
+      "path" : "addFollower/{name}/{follower}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "tinygram.UNUSED_Followers.addFollower",
+      "request" : {
+        "parameters" : {
+          "name" : {
+            "type" : "string",
+            "required" : true
+          },
+          "follower" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "UNUSED_MessageWrapper" : {
+        "id" : "UNUSED_MessageWrapper",
+        "type" : "object",
+        "properties" : {
+          "user" : {
+            "$ref" : "Entity"
+          },
+          "message" : {
+            "$ref" : "Entity"
+          }
+        }
+      },
+      "Entity" : {
+        "id" : "Entity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "propertiesFrom" : {
+            "$ref" : "Entity"
+          },
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "properties" : {
+            "$ref" : "JsonMap"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
+          }
+        }
+      },
+      "JsonMap" : {
+        "id" : "JsonMap",
+        "type" : "object"
+      },
+      "Message" : {
+        "id" : "Message",
+        "type" : "object",
+        "properties" : {
+          "body" : {
+            "type" : "string"
+          },
+          "image" : {
+            "type" : "string"
+          }
+        }
+      },
+      "MessageCollection" : {
+        "id" : "MessageCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Message"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "tinygram.UNUSED_MessageEP.addMessageToFollowers" : {
+        "request" : {
+          "$ref" : "UNUSED_MessageWrapper"
+        }
+      },
+      "tinygram.UNUSED_MessageEP.getTimeline" : {
+        "response" : {
+          "$ref" : "MessageCollection"
+        }
+      },
+      "tinygram.UNUSED_MessageEP.postMessage" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      },
+      "tinygram.UNUSED_MessageEP.addMessageToUser" : {
+        "request" : {
+          "$ref" : "UNUSED_MessageWrapper"
+        }
+      },
+      "tinygram.UNUSED_Users.getMembre" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      },
+      "tinygram.UNUSED_Users.setMembre" : {
+      },
+      "tinygram.UNUSED_Followers.getFollowers" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      },
+      "tinygram.UNUSED_Followers.addFollower" : {
+        "response" : {
+          "$ref" : "Entity"
+        }
+      }
+    }
+  }
+}

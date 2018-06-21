@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value>tinygram.UNUSED_Followers,tinygram.UNUSED_MessageEP,tinygram.UNUSED_Users</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+ 
+<servlet>
+    <description/>
+    <display-name>TimelineServlet</display-name>
+    <servlet-name>TimelineServlet</servlet-name>
+    <servlet-class>tinygram.TimelineServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TimelineServlet</servlet-name>
+    <url-pattern>/timeline</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description/>
+    <display-name>MessageServlet</display-name>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>tinygram.MessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MessageServlet</servlet-name>
+    <url-pattern>/message</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description/>
+    <display-name>UserServlet</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>tinygram.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description/>
+    <display-name>FollowerServlet</display-name>
+    <servlet-name>FollowerServlet</servlet-name>
+    <servlet-class>tinygram.FollowerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FollowerServlet</servlet-name>
+    <url-pattern>/follow</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description/>
+    <display-name>PopulateServlet</display-name>
+    <servlet-name>PopulateServlet</servlet-name>
+    <servlet-class>tinygram.PopulateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PopulateServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description/>
+    <display-name>InitServlet</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>tinygram.InitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/initialisation</url-pattern>
+  </servlet-mapping>
+ <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+</filter>
+<filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+</filter-mapping>
+</web-app>
